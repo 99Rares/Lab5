@@ -21,9 +21,6 @@
     <ClCompile Include="Lab5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FilmRepo.cpp">
-      <Filter>Header Files</Filter>
-    </ClCompile>
     <ClCompile Include="Admin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -34,6 +31,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FilmRepo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

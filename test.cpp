@@ -45,7 +45,7 @@ void Test::test() {
 	r.edit_trailer(a, "aaa");
 	a.set_trailer("aaa");
 
-	assert(r.find_film(a) == a);
+	assert(r.find_film(a).get_titel() == a.get_titel());
 	r.remove(a);
 	assert(r.get_filme().size() == 0);
 }

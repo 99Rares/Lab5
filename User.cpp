@@ -18,10 +18,9 @@ void User::set_watch(vector<Film> watch) {
 }
 //adauga la watchlist
 void User::add_to_watch(Film film) {
-	for (int i = 0; i < WatchList.size(); i++)
 		//daca e gasit returneaza ca filmul deja exista in lista
-		if (film.get_titel() == WatchList[i].get_titel() && film.get_jahr() == WatchList[i].get_jahr()) {
-			cout << "Das Film " << film.get_titel() << "ist schon in der liste\n";
+		if (find_film(film)) {
+			cout << "Das Film " << film.get_titel() << " ist schon in der liste\n";
 			return;
 		}
 	WatchList.push_back(film);
@@ -33,13 +32,14 @@ void User::add_like(Film film) {
 }
 //elimina din watchlist
 void User::remove_from_watch(Film film) {
-	for (int i = 0; i < WatchList.size(); i++)
+	for (vector<Film>::iterator i = WatchList.begin(); i < WatchList.end(); i++)
 		//daca nu e gasit nu se sterge si se afiseaza error 404 film (cout)
-		if (film.get_titel() == WatchList[i].get_titel() && film.get_jahr() == WatchList[i].get_jahr()) {
-			WatchList.erase(WatchList.begin() + i);
+		if (film.get_titel() == i->get_titel() && film.get_jahr() == i->get_jahr()) {
+			WatchList.erase(i);
+			cout << "Film " << film.get_titel() << " removed." << '\n';
 			return;
 		}
-	cout << "Error 404: Film" << film.get_titel() << '\n'; //"eroarea"
+	cout << "WatchList Error 404: Film " << film.get_titel() << '\n'; //"eroarea"
 }
 
 //printeaza watchlist-ul
@@ -50,8 +50,8 @@ void User::print_watch() {
 
 //cauta filmul
 bool User::find_film(Film film) {
-	for (int i = 0; i < WatchList.size(); i++)    // verifiva daca filmul exista deja in watchlist
-		if (film.get_titel() == WatchList[i].get_titel() && film.get_jahr() == WatchList[i].get_jahr())
+	for (vector<Film>::iterator i = WatchList.begin(); i < WatchList.end(); i++)    // verifiva daca filmul exista deja in watchlist
+		if (film.get_titel() == i->get_titel() && film.get_jahr() == i->get_jahr())
 			return true;
 	return false;
 }

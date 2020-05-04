@@ -24,12 +24,12 @@ public:
 
 	void edit_trailer(Film, string);
 
-	void print_filme() const;
+	void print_filme();
 
-	Film find_film(Film) const;
+	Film find_film(Film);
 
-	vector<Film> sort_genre(string) const;
+	vector<Film> sort_genre(string);
 
-	double find_likes(Film) const;
+	double find_likes(Film);
 };
 

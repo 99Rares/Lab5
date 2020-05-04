@@ -16,6 +16,8 @@ public:
 
     void user_menu();
 
+    void edit_menu(Film);
+
     void add_to_watch();
 
     void rate();

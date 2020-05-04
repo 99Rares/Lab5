@@ -34,17 +34,14 @@ public:
 
 	void set_trailer(string);
 
-	void set_jahr(double);
+	void set_jahr(int);
 
-	void set_like(double);
+	void set_like(int);
 
 	// operator overload
 
 	friend std::ostream& operator << (std::ostream&, const Film&);
 
-	friend bool operator==(const Film&, const Film&);
-	
-	friend bool operator!=(const Film&, const Film&);
 
 
 };

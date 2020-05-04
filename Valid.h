@@ -29,6 +29,13 @@ public:
         }
         return x;
     }
+    //se valideaza input-ul pentru a fi string
+    string read_string() {
+        string arg;
+        cin.ignore();
+        getline(cin, arg);
+        return arg;
+    }
 
 };
 

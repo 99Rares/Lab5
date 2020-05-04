@@ -20,23 +20,24 @@ int main() {
 	Film i("Justice League", "", 2017, 42, "https://youtu.be/3cxixDgHUYw");
 	Film j("Mission: Impossible", "Action", 2018, 69, "https://youtu.be/wb49-oV0F78");
 
-	FilmRepo filmRepo;
-	filmRepo.add(a);
-	filmRepo.add(b);
-	filmRepo.add(c);
-	filmRepo.add(d);
-	filmRepo.add(e);
-	filmRepo.add(f);
-	filmRepo.add(g);
-	filmRepo.add(h);
-	filmRepo.add(i);
-	filmRepo.add(j);
+	FilmRepo list;
+	list.add(a);
+	list.add(b);
+	list.add(c);
+	list.add(d);
+	list.add(e);
+	list.add(f);
+	list.add(g);
+	list.add(h);
+	list.add(i);
+	list.add(j);
 
-	User user = User(filmRepo);
-	Admin admin = Admin(filmRepo);
+	User user = User(list);
+	Admin admin = Admin(list);
 
 	user.add_to_watch(a);
 	user.add_to_watch(h);
+	user.add_to_watch(e);
 
 
 	UI ui(admin, user);

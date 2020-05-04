@@ -41,23 +41,15 @@ void Film::set_trailer(string trailer) {
 	this->trailer = trailer;
 }
 
-void Film::set_jahr(double jahr) {
+void Film::set_jahr(int jahr) {
 	this->jahr = jahr;
 }
 
-void Film::set_like(double like) {
+void Film::set_like(int like) {
 	this->like = like;
 }
 //operators
 std::ostream& operator << (std::ostream& output, const Film& film) {
 	output << "Film:\nTitel: " << film.titel << "\nGenre: " << film.genre << "\nJahr: " << film.jahr << "\nLikes: " << film.like << "\nTrailer: " << film.trailer << "\n";
 	return output;
-}
-
-bool operator==(const Film& film1, const Film& film2) {
-	return (film1.titel == film2.titel && film1.genre == film2.genre && film1.jahr == film2.jahr && film1.like == film2.like && film1.trailer == film2.trailer);
-}
-
-bool operator!=(const Film& film1, const Film& film2) {
-	return !(film1 == film2);
 }
