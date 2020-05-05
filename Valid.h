@@ -3,8 +3,9 @@
 class Valid
 {
 public:
-	double read_nr() {
-        double x;
+    //se valideaza input-ul pentru a fi numar
+	int read_nr() {
+        int x;
         cin >> x;
         while (!cin)
         {
@@ -15,6 +16,7 @@ public:
         }
         return x;
 	}
+    // se valideaza pentru a fi numar dar dintre numerele disponibile in meniu
     int read_range(int n) {
         int x;
         cin >> x;
