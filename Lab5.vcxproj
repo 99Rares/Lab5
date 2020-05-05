@@ -138,11 +138,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Admin.cpp" />
     <ClCompile Include="Film.cpp" />
     <ClCompile Include="FilmRepo.cpp" />
     <ClCompile Include="Lab5.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Admin.h" />
     <ClInclude Include="Film.h" />
     <ClInclude Include="FilmRepo.h" />
   </ItemGroup>

@@ -24,12 +24,18 @@
     <ClCompile Include="FilmRepo.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="Admin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Film.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FilmRepo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Admin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
