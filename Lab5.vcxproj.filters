@@ -21,9 +21,15 @@
     <ClCompile Include="Lab5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FilmRepo.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Film.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FilmRepo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
